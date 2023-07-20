@@ -1,0 +1,317 @@
+{% load static %}
+{% if note == 'pending' %}
+<script>
+	document.getElementById("note").textContent = '1';
+	document.getElementById("msg").textContent = '0';
+	console.log("status accept");
+</script>
+
+{% endif %}
+{% if mess %}
+<script>
+	console.log('{{mess}}')
+	// var s = '{{mess}}'
+	// document.getElementById("mess").textContent = s;
+	alert('{{mess}}');
+</script>
+{% endif %}
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/favicon.png">
+		<!-- Author Meta -->
+		<meta name="author" content="">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>Medicator - Online disease pediction and doctor consultation</title><link rel="shortcut icon" href="{% static 'home/img/logo2.png' %}" type="image/x-icon">
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="{% static 'patient/css/linearicons.css' %}">
+			<link rel="stylesheet" href="{% static 'patient/css/font-awesome.min.css' %}">
+			<link rel="stylesheet" href="{% static 'patient/css/bootstrap.css' %}">
+			<link rel="stylesheet" href="{% static 'patient/css/magnific-popup.css' %}">
+			<link rel="stylesheet" href="{% static 'patient/css/nice-select.css' %}">					
+			<link rel="stylesheet" href="{% static 'patient/css/animate.min.css' %}">
+			<link rel="stylesheet" href="{% static 'patient/css/owl.carousel.css' %}">
+			<link rel="stylesheet" href="{% static 'patient/css/main.css' %}">
+		</head>
+		<style>
+			body{
+				background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+			}
+		</style>
+		<body>
+
+			<!-- #header Start-->
+			  <header id="header">
+			  	<div class="header-top bg-1">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-7 col-xs-12 hide_column">
+								<div class="header-top-menu">
+									<ul>
+										<li><a href="#" style="color: #fff;font-size: 20px;font-weight: bolder;">Welcome, {{fname}}</a></li>
+										<!-- <li><a href="#">Community</a></li>
+										<li><a href="sell_an_item.html">Become A Seller</a></li> -->
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-5 col-xs-12">
+								<div class="header-top-right text-right">
+									<ul class="account">
+										<li>
+											<a href="{% url 'input_symptoms'%}">Check Disease</a>
+										</li>
+										<li>
+											<a href="{% url 'logout_patient' %}">Sign Out</a>
+										</li>	
+										<li>
+											<a href="#">
+												<!-- <img src="{% static 'patient/img/cart.png' %}" alt=""> -->
+												{{fname}}  <span>
+												<i class="fa fa-angle-down"></i></span>
+											</a>
+											<ul class="profile">
+												<li><a href="{% url 'user_profile_patient'%}">User Profile</a></li>
+
+												<li><a href="{% url 'logout_patient' %}">Sign Out</a></li>
+											</ul>
+										</li>
+									</ul>
+									<ul class="notification_icons">
+										<li>
+											<a href="{% url 'pat_history' %}"><i class="fa fa-bell-o"></i><span class="number" id="note"></span></a>
+											<ul class="profile">
+												<li>
+													<span id="notetext"></span>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<a href="#"><i class="fa fa-envelope-o"></i></span></a>
+											<!-- <ul class="profile">
+												<li>
+													<span id="text"></span>
+												</li>
+												<li>
+													<a href="#" id="link" target="_blank">Click here to meet doctor</a>
+												</li>
+											</ul> -->
+										</li>
+										<!-- <li>
+											<a href="#">
+												<i class="fa fa-shopping-basket"></i>
+											</a>
+										</li>  -->
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			    
+			  </header><!-- #header -->
+
+
+			<!-- start banner Area -->
+
+			<!-- End banner Area -->	
+			
+			<!-- Start post Area -->
+			<section class="post-area section-gap">
+				<div class="container">
+					<div style="color: red;"><span id="mess"></span></div>
+
+					<div class="row justify-content-center d-flex">
+						<div class="col-lg-3 sidebar">
+							<div class="single-slidebar-profile">
+								<figure>
+                                    <a href="#" class="employer-dashboard-thumb" id="DP"><img src="{% static 'patient/img/employer.png' %}" alt="" height="150px" width="150px"></a>
+                                    <figcaption>
+                                        <h2>{{fname}} </h2>
+                                        <!--  <p>Super Samurai Developers Los Angeles, Usa</p> -->
+                                         <ul class="share_link">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+										</ul>
+                                    </figcaption>
+                                </figure>
+							</div>
+							<div class="single-slidebar">
+								
+								<ul class="cat-list">
+									<!-- <li><a class="justify-content-between d-flex text_active" href="user_profile.html"><p style="font-size: 20px;"><i class="fa fa-user-o pr-2"></i>  Check Disease</p></a></li> -->
+									<li><a class="justify-content-between d-flex" href="{% url 'pat_history' %}"><p><i class="fa fa-file-word-o pr-2"></i>  History</p></a></li>
+									</ul>
+							</div>							
+
+						</div>
+						<div class="col-lg-9 post-list">
+							<div class="profile_job_content col-lg-12">
+								<div class="headline">
+									<h3> Welcome User</h3>
+								</div>
+								<div class="profile_job_detail">
+									<div class="row">
+										
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h4>Patient Name: {{fname}} &nbsp {{lname}}</h4>
+												<!-- <input class="form-control" type="text" placeholder="Account Name"> -->
+											</div>
+										</div>
+										
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h4>Email: {{email}}</h4>
+												<!-- <input class="form-control" type="text" placeholder="Account Name"> -->
+											</div>
+										</div>
+
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h4>Phone Number: {{phone}}</h4>
+												<!-- <input class="form-control" type="text" placeholder="Account Name"> -->
+											</div>
+										</div>
+
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h4>Date of Birth: {{dob}}</h4>
+												
+												<!-- <input class="form-control" type="text" placeholder="Account Name"> -->
+											</div>
+										</div>
+
+										<!-- <div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h5>Website *</h5>
+												<input class="form-control" type="text" placeholder="website name">
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h5>New Password *</h5>
+												<input class="form-control" type="password" placeholder="new password">
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h5>Confirm Password *</h5>
+												<input class="form-control" type="password" placeholder="confirm password">
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-12">
+											<div class="submit-field">
+												<h5>Email *</h5>
+												<input class="form-control" type="email" placeholder="example@example.com">
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h5>Profile Image *</h5>
+												<div class="careerfy-fileUpload">
+		                                            <span class="clr_b"><i class="fa fa-plus careerfy-add"></i> Upload Photo</span>
+		                                            <input type="file" class="careerfy-upload">
+		                                        </div>
+		                                    </div>
+		                                </div>
+										<div class="col-md-6 col-sm-12">
+											<div class="submit-field">
+												<h5>Country *</h5>
+												<select class="form-control">
+												  <option>Select Country</option>
+												  <option>China</option>
+												  <option>Srilanka</option>
+												  <option>Bangladesh</option>
+												  <option>Pakistan</option>
+												</select>
+											</div>
+										</div>										 -->
+										<!-- <div class="col-md-12 col-sm-12">
+											<div class="submit-field">
+												<h5>Description *</h5>
+												<textarea class="form-control" rows="5" placeholder="Nulla bibendum commodo rhoncus. Sed mattis magna nunc, ac varius quam pharetra vitae. Praesent vitae ipsum eu magna pretium aliquam. Curabitur interdum quis velit non tincidunt.Donec pretium gravida erat, a faucibus velit egestas eget."></textarea>
+											</div>
+										</div> -->
+									</div>
+								</div>
+							</div>
+
+								
+
+							<!-- <div class="add_job_btn col-lg-12 mt-5">
+								<div class="submit-field">
+									 <button type="submit" class="job_detail_btn">Submit</button>
+								</div>
+							</div>															 -->
+
+						</div>
+						
+					</div>
+				</div>	
+			</section>
+			<!-- End post Area -->
+
+			<!-- start Subscribe Area -->
+            
+            <!-- End Subscribe Area --> 
+
+			<!-- start footer Area -->		
+			
+			<div class="copyright1">
+				<div class="container">
+					<div class="row"> 
+						<div class="col-md-6 col-12">
+							<div class="bottom_footer_info">
+								<p> &copy; Copyright 2022. All rights reserved</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- End footer Area --> 		
+
+			<script src="{% static 'patient/js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="{% static 'patient/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{% static 'patient/js/vendor/bootstrap.min.js' %}"></script>			
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="{% static 'patient/js/easing.min.js' %}"></script>			
+			<script src="{% static 'patient/js/hoverIntent.js' %}"></script>
+			<script src="{% static 'patient/js/superfish.min.js' %}"></script>	
+			<script src="{% static 'patient/js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{% static 'patient/js/jquery.magnific-popup.min.js' %}"></script>	
+			<script src="{% static 'patient/js/owl.carousel.min.js' %}"></script>			
+			<script src="{% static 'patient/js/jquery.sticky.js' %}"></script>
+			<script src="{% static 'patient/js/jquery.nice-select.min.js' %}"></script>			
+			<script src="{% static 'patient/js/parallax.min.js' %}"></script>		
+			<script src="{% static 'patient/js/mail-script.js' %}"></script>	
+			<script src="{% static 'patient/js/main.js' %}"></script>
+			<script src="{% static 'push.min.js' %}"></script>
+			<script src="{% static 'serviceWorker.min.js' %}"></script>	
+			<script>
+				localStorage.clear();
+			</script>
+		</body>
+	</html>
+
+
+

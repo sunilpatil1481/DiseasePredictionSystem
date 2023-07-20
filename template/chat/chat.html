@@ -1,0 +1,246 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'chat/chat.css' %}">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+<!-- Mobile Specific Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Favicon-->
+<link rel="shortcut icon" href="img/favicon.png">
+<!-- Author Meta -->
+<meta name="author" content="">
+<!-- Meta Description -->
+<meta name="description" content="">
+<!-- Meta Keyword -->
+<meta name="keywords" content="">
+<!-- meta character set -->
+<meta charset="UTF-8">
+<!-- Site Title -->
+<title>Medicator - Online disease pediction and doctor consultation</title><link rel="shortcut icon" href="{% static 'home/img/logo2.png' %}" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{% static 'patient/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'patient/css/main.css' %}">
+</head>
+<style>
+    body{
+        background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+</style>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#config-web-app -->
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC8PuUSgZ89_S-TxYVodCbJ3lJR48SyLy0",
+    authDomain: "authenticate-3465d.firebaseapp.com",
+    databaseURL: "https://authenticate-3465d.firebaseio.com",
+    projectId: "authenticate-3465d",
+    storageBucket: "authenticate-3465d.appspot.com",
+    messagingSenderId: "840816507732",
+    appId: "1:840816507732:web:b29ea124c173ca14e5e6c1",
+    measurementId: "G-CBZH32YKPC"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+
+</head>
+<body>
+    <header id="header">
+        <div class="header-top bg-1">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-7 col-xs-12 hide_column">
+                      <div class="header-top-menu">
+                          <ul>
+                              <li><a href="#" style="color: #fff;font-size: 20px;font-weight: bolder;">Welcome, {{fname}}</a></li>
+                              <!-- <li><a href="#">Community</a></li>
+                              <li><a href="sell_an_item.html">Become A Seller</a></li> -->
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-5 col-xs-12">
+                      <div class="header-top-right text-right">
+                          <ul class="account">
+                              
+                              <li>
+                                  <a href="{% url 'logout_patient' %}">Sign Out</a>
+                              </li>
+                              <li>
+                                  <a href="#">
+                                      <!-- <img src="{% static 'patient/img/cart.png' %}" alt=""> -->
+                                      {{fname}}  <span>
+                                      <i class="fa fa-angle-down"></i></span>
+                                  </a>
+                                  <ul class="profile">
+                                      <li><a href="{% url 'user_profile_doctor'%}">User Profile</a></li>
+
+                                      <li><a href="{% url 'logout_patient' %}">Sign Out</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                          <ul class="notification_icons">
+                              <li>
+                                  <a href="{% url 'pat_request'%}"><i class="fa fa-bell-o"></i><span class="number" id="note"></span></a>
+                              </li>
+                              <li>
+                                  <a href="{% url 'doc_history' %}"><i class="fa fa-envelope-o"></i><span class="number" id="msg"></span></a>
+                              </li>
+
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </header>
+    <section class="post-area section-gap" style="width: 98%;">
+        <!-- <div class="container" style="width: 100%;"> -->
+
+        
+    
+    <div style="border: 2px solid black; width: 30%; margin-top: 10px; border-radius: 5px;display: block;float: left;margin-left: 2%;">
+            <div style="height: 40px; background-color: #6666FF;">
+                <h3 id="recieverUser" style="color: white; margin-left: 5px">@{{rname}}</h3>
+            </div>
+        <div class="container" id="mesages"  style="width: 100%;">
+            
+        </div>
+        
+                <input type="text" id="textMessage" placeholder="Text">
+                <input type="button" id="sendMessage" value="Send" class="btn btn-primary mb-2">
+                <input type="button" id="VideoCall" value="Video Call" class="btn btn-primary mb-2" onclick="videoChat()">
+
+    </div>
+
+    <div style="border: 2px solid black; width: 66%; margin-top: 10px; border-radius: 5px;float: right;height:590px;display: none;" id="vc">
+        <div style="height: 40px; background-color: #6666FF;">
+            <h3 id="recieverUser" style="color: white; margin-left: 5px">Consultation</h3>
+        </div>
+        <div style="width: 29%;height: 550px;float: left;text-align: center;">
+            
+            <h4>Symptoms: </h4>
+            
+            {% for i in symptoms %}
+                <li>{{i}}</li>
+            {% endfor %}
+            <br>
+            <h4>Predicted Disease:</h4><p> {{pd}}</p><br>
+            <h4>Confidence Score:</h4><p> {{cs}}</p><br>
+            <input type="button" value="Consulted" class="btn btn-danger mb-2">
+        </div>
+        <div style="width: 69%;float: right;" id="meet">
+            <script src='https://meet.jit.si/external_api.js'></script>
+       </div>
+        
+    
+</div>
+
+
+    
+<!-- </div> -->
+</section>
+
+</body>
+<script>
+    const domain = 'meet.jit.si';
+const options = {
+    roomName: 'medicator{{dob}}',
+    // width: 700,
+    height: 550,
+    
+    devices: {
+        audioInput: '<deviceLabel>',
+        audioOutput: '<deviceLabel>',
+        videoInput: '<deviceLabel>'
+    },
+    parentNode: document.querySelector('#meet'),
+};
+const api = new JitsiMeetExternalAPI(domain, options);
+</script>
+<script src="{% static 'chat/chat.js' %}"></script>
+<script src="{% static 'patient/js/vendor/jquery-2.2.4.min.js' %}"></script>
+			<script src="{% static 'patient/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="{% static 'patient/js/vendor/bootstrap.min.js' %}"></script>
+			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="{% static 'patient/js/easing.min.js' %}"></script>
+			<script src="{% static 'patient/js/hoverIntent.js' %}"></script>
+			<script src="{% static 'patient/js/superfish.min.js' %}"></script>
+			<script src="{% static 'patient/js/jquery.ajaxchimp.min.js' %}"></script>
+			<script src="{% static 'patient/js/jquery.magnific-popup.min.js' %}"></script>
+			<script src="{% static 'patient/js/owl.carousel.min.js' %}"></script>
+			<script src="{% static 'patient/js/jquery.sticky.js' %}"></script>
+			<script src="{% static 'patient/js/jquery.nice-select.min.js' %}"></script>
+			<script src="{% static 'patient/js/parallax.min.js' %}"></script>
+			<script src="{% static 'patient/js/mail-script.js' %}"></script>
+			<script src="{% static 'patient/js/main.js' %}"></script>
+			
+<script>
+    // if(localStorage.getItem('recieverID') == null){
+    //     localStorage.setItem('recieverID','{{receiver}}')
+    // }
+    // if(localStorage.getItem('Current_userID') == null){
+    //     localStorage.setItem('Current_userID','{{sender}}')
+    // }
+    window.localStorage.setItem('recieverID','{{receiver}}');
+    window.localStorage.setItem('Current_userID','{{sender}}');
+    if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+
+    function videoChat()
+    {
+        document.getElementById("vc").style.display = "block";
+    }
+
+    navigator.getUserMedia = navigator.getUserMedia ||
+                         navigator.webkitGetUserMedia ||
+                         navigator.mozGetUserMedia;
+
+</script>
+</html>

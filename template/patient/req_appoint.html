@@ -1,0 +1,189 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <!-- Author Meta -->
+    <meta name="author" content="" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>Medicator - Online disease pediction and doctor consultation</title><link rel="shortcut icon" href="{% static 'home/img/logo2.png' %}" type="image/x-icon">
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+      rel="stylesheet"
+    />
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="{% static 'patient/css/linearicons.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'patient/css/font-awesome.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'patient/css/bootstrap.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'patient/css/magnific-popup.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'patient/css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'patient/css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'patient/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'patient/css/main.css' %}" />
+  </head>
+  <style>
+    body {
+      background: #abbaab; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #ffffff,
+        #abbaab
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #ffffff,
+        #abbaab
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+  </style>
+  <body>
+    <!-- #header Start-->
+    <header id="header">
+      <div class="header-top bg-1">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-xs-12 hide_column">
+              <div class="header-top-menu">
+                <ul>
+                  <li>
+                    <a
+                      href="#"
+                      style="color: #fff; font-size: 20px; font-weight: bolder"
+                      >Welcome, {{fname}}</a
+                    >
+                  </li>
+                  <!-- <li><a href="#">Community</a></li>
+										<li><a href="sell_an_item.html">Become A Seller</a></li> -->
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-5 col-xs-12">
+              <div class="header-top-right text-right">
+                <ul class="account">
+                  <li>
+                    <a href="{% url 'input_symptoms'%}">Check Disease</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'logout_patient' %}">Sign Out</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <!-- <img src="{% static 'patient/img/cart.png' %}" alt=""> -->
+                      {{fname}} <span> <i class="fa fa-angle-down"></i></span>
+                    </a>
+                    <ul class="profile">
+                      <li><a href="{% url 'user_profile_patient'%}">User Profile</a></li>
+
+                      <li><a href="{% url 'logout_patient' %}">Sign Out</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="notification_icons">
+                  <li>
+                    <a href="{% url 'pat_history' %}"><i class="fa fa-bell-o"></i><span class="number" id="note"></span></a>
+                    <ul class="profile">
+                      <li>
+                        <span id="notetext"></span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-envelope-o"></i></a>
+                    
+                  </li>
+                  <!-- <li>
+											<a href="#">
+												<i class="fa fa-shopping-basket"></i>
+											</a>
+										</li>  -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- #header -->
+    <section class="post-area section-gap">
+      <div class="container">
+        <h1 style="font-family:Poppins;color:violet;font-size: 40px;" align="center"> Appointment successfully submitted </h1>
+        
+      </div>
+    </section>
+    <script src="{% static 'patient/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script
+      src="{% static 'patient/https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' %}"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'patient/js/vendor/bootstrap.min.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'patient/js/easing.min.js' %}"></script>
+    <script src="{% static 'patient/js/hoverIntent.js' %}"></script>
+    <script src="{% static 'patient/js/superfish.min.js' %}"></script>
+    <script src="{% static 'patient/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'patient/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'patient/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'patient/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'patient/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'patient/js/parallax.min.js' %}"></script>
+    <script src="{% static 'patient/js/mail-script.js' %}"></script>
+    <script src="{% static 'patient/js/main.js' %}"></script>
+    <script>
+      var str1 = '{{note}}';
+      var str2 = 'pending';
+      if(str1 == 'pending')
+      {
+        document.getElementById("note").textContent = '1';
+        document.getElementById("notetext").textContent = "Your request is pending";
+        document.getElementById("msg").textContent = '0';
+        document.getElementById("text").textContent = "No activity";
+      }
+      else if(str1 == 'reject')
+      {
+        document.getElementById("note").textContent = '0';
+        document.getElementById("notetext").textContent = "No activity";
+        document.getElementById("msg").textContent = '1';
+        document.getElementById("text").textContent = "Your request has been "+str1+"ed";
+        // document.getElementById("msg").innerHTML="<ul><li> Your request has been "+str1+"ed <li><ul>";
+      }
+      // else if(str1 == 'accept')
+      // {
+      //   document.getElementById("note").textContent = '0';
+      //   document.getElementById("notetext").textContent = "No activity";
+      //   document.getElementById("msg").textContent = '1';
+      //   document.getElementById("text").textContent = "Your request has been "+str1+"ed";
+      //   document.getElementById("link").href = "https://meet.jit.si/medicator{{dob}}"
+        
+      //   // document.getElementById("msg").innerHTML="<ul><li> Your request has been "+str1+"ed <li><ul>";
+      // }
+      
+    </script>
+    <script>
+      localStorage.clear();
+    </script>
+  </body>
+</html>

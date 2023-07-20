@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clarimy Bootstrap 4 Business Template Documentation</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <meta name="description" content="Clarimy Bootstrap 4 Business pages">
+    <meta name="author" content="CodeGlamour">
+    <meta name="keywords" content="App Bootstrap 4 Business theme template">
+    <!--
+    Mobile Specific Metas  ==============================
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    CSS
+    ==================================================
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700,800,600,300" rel="stylesheet">
+    <link href="vendor/syntaxhighlighter/styles/shCoreDefault.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header-wrapper">
+        <div class="container text-center">
+            <div id="logo">
+                <h1><strong>Clarimy Bootstrap 4 Business Template Documentation</strong></h1>
+            </div>
+            <strong>Version:</strong>
+            <span>1.0 |</span>
+            <strong>Created Date:</strong>
+            <span>01 December 2018</span>
+        </div>
+    </header>
+    <div class="container">
+        <ul class="docs-nav">
+            <li>
+                <strong>Introduction</strong>
+            </li>
+            <li>
+                <a class="cc-active active" href="#getting-started">Getting Started</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#html-structure">HTML Structure</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#table-of-content">Table of Content</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#logo-settings">Logo</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#chaning-fonts">Fonts</a>
+            </li>
+           
+            <li>
+                <a class="cc-active" href="#helpers">Helper Classes</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#grid">Grid</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#browser-support">Browser Support</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#creadits">Source & Credits</a>
+            </li>
+            <li>
+                <a class="cc-active" href="#template-support">Template Support</a>
+            </li>
+        </ul>
+        <div class="docs-content">
+            <div class="docs-content-inner">
+                <section id="getting-started">
+                    <h1>Introduction</h1>
+                    <p>Welcome and thank you for purchasing our Template.
+                    We really do appreciate every sale. If you have any questions that are not covered in this help file you can contact us via support on our profile page or send us email. If you like our work please do not forget to rate it.</p>                   
+                    <br/>
+                    <h1>Software</h1>
+                    <p>
+                        To edit this Website Template we recommend you download appropriate software:
+                        <ol>
+                            <li>
+                                Use Sublime Text, Notepad++ or Web storm code editor to edit the source code of template files.
+                            </li>
+                            <li>
+                                To upload files on a server you'll need FTP manager, we recommend you to use FileZilla.
+                            </li>
+                        </ol>
+                    </p>
+                    <br/>
+                    <h1>Hosting</h1>
+                    <p class="offset-top-10">
+                        You can run index.html file directly from your site folder, but it won't let you explore all template functionality. You should upload template to hosting server in order to display a fully working website correctly.
+                        <br/>
+                        <br/>
+                        You may also install Website Template to your computer locally by using localhost. In order to set up local server you may use WAMP, AppServ, MAMP or any similar software.
+                    </p>
+                    <p>
+                        You can check following tutorials on how to set up local server:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=N6ENnaRotmo">
+                                How to install XAMP web server
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=kVc_9vAO7oI">
+                                How to install WAMP web server
+                            </a>
+                        </li>
+                    </ul>
+                    <br/>
+                    <h1 id="Installation">Getting Started</h1>
+                    <h4>What's Included</h4>
+                    <p>Once you have download the package you will see the following folder structure in "
+                        <strong>template</strong>" Folder</p>
+                    <div id="default-tree">
+                        <ul>
+                            <li>
+                                <strong>css</strong>- Main Stylesheet Files</li>
+                            <li>
+                                <strong>fonts</strong>- Fonts file and css for fonts</li>
+                            <li>
+                                <strong>images</strong>- Img Folder</li>
+                            <li>
+                                <strong>scripts</strong>- Js Folder</li>
+                        </ul>
+                    </div>
+                    <p>In order to use in your website, you need to upload template files (
+                        <strong>inside the folder www</strong>) to your web server with the help of one of the FTP-clients (for example, WinSCP or Total Commander etc).</p>
+                </section>
+                <section id="html-structure">
+                    <h1>HTML Structure</h1>
+                    <p>Clarimy Business Template is based on Bootstrap 4 Framework (
+                        <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>) Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
+                    <p>Below is a sample coding structure:</p>
+                    <pre class="brush: html;">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+
+    &lt;!-- Title, Stylesheets and Meta tags --&gt;
+    ...
+
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Menu Wraper --&gt;
+    &lt;div class="menu-wrap"&gt;
+
+        ...
+
+    &lt;/div&gt;
+
+    &lt;!--/////////////////////////// HEADER Banner \\\\\\\\\\\\\\\\\\\\\\\\\\\--&gt;
+    &lt;header id="main-banner"&gt;
+
+        ...
+
+    &lt;/header&gt;
+
+    &lt;!--/////////////////////////// CONTENT \\\\\\\\\\\\\\\\\\\\\\\\\\\--&gt;
+    &lt;div class="main-wrapper"&gt;
+        &lt;section&gt;
+            &lt;div class="container"&gt;
+
+                ...
+
+            &lt;/div&gt;
+        &lt;/section&gt;
+
+        &lt;!--/////////////////////////// FOOTER \\\\\\\\\\\\\\\\\\\\\\\\\\\--&gt;
+        &lt;footer&gt;
+            &lt;div class="container"&gt;
+
+            ...
+
+            &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+
+&lt;!-- Jquery plugins and scripts --&gt;
+&lt;script src="js/jquery-2.2.4.min.js"&gt;&lt;/script&gt;
+
+    ...
+
+&lt;!-- Plugins and scripts initialization --&gt;
+&lt;script src="js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                </section>
+                <section id="table-of-content">
+                    <h1>Table of contents</h1>
+                    <p class="offset-top-20"><span class="text-bold">style.css</span> has the following structure:</p>
+                   
+                    <pre class="brush: html;"><head>
+/* ----------------------
+[Table of contents]
+01. Variables
+02. Prefix
+03. header
+04. Slider
+05. About
+06. Solutions
+07. Services
+08. Portfolio
+09. Available
+10. Why
+11. Team
+12. Great Started
+13. Pricing
+14. Counter
+15. Post
+16. Partner
+17. Footer
+18. Call-to-action
+19. Contact
+ --------------------------*/
+</head></pre>
+                </section>
+
+                <section id="logo-settings">
+                    <h1>Logo Settings</h1>
+                    <p>Default site logo is placed inside<code>header</code> container.</p>
+                    <pre class="brush: html;"><!--HEADER-->
+    &lt;div class="logo-menu">
+              &lt;a class="logo" href="#">Your Logo Here &lt;/a&gt;
+                
+                ...
+</pre>
+                </section>
+                <section id="chaning-fonts">
+                    <h1>Changing Fonts</h1>
+                    To change the embedded font, please take a look in the head part of the website and you will find this tag: 
+                        <a target="_blank" href="http://www.google.com/fonts">Google Fonts Library</a>
+                    </p>
+                    <p>If you wish to add/change the site fonts, please take a look in the<code>head</code> part of the website and you will find this tag:</p>
+                    <pre class="brush: html"><!-- LOAD GOOGLE FONTS -->
+&lt;https://fonts.googleapis.com/css?family=Lato&gt;
+</pre>
+                    <p>To include new font you can simply add another line like this:</p>
+                    <pre class="brush: html"><!-- LOAD GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet" type="text/css">
+</pre>
+                    <p>Or add an<code>|</code> seperator and paste<code>Lato:400,300,800,700,600</code> after default website fonts link.</p>
+                </section>
+             
+                <section id="helpers">
+                    <h1>Helpers</h1>
+                    <br>
+                    <p>Beyound Business Template helper css classes allow you to build your custom layout without touching any CSS code</p>
+                    <p>These classes are generic helper classes predifined in the CSS of pages, here is quick view what they can do</p>
+           
+                    <h4>Margins</h4>
+                    <p>You can add this helper class to any element in your HTML code to set Margins</p>
+                    <table class="table table-bordered table-condensed table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th>First Prefix ( m-*)</th>
+                                <th>Second Prefix(mt/b/l/r-*)</th>
+                                <th>Last Prefix(mt-$value)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>m for margin</td>
+                                <td>t : top, b : bottom, l : left, r : right</td>
+                                <td>5,10,15,20, ... 150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <span>example :</span>
+                    </p><code>mt-10</code>
+                    <span>which means Margin Top 10px</span>
+                    <br><code>mb-20</code>
+                    <span>which means Margin Bottom 20px</span>
+                    <br><code>ml-5</code>
+                    <span>which means Margin Left 5px</span>
+                    <br><code>mr-35</code>
+                    <span>which means Margin Right 35px</span>
+                    <br>
+                    <p>
+                        <label class="label label-danger">Note:</label>Value can not be anything, 1,2,4,5,6. It has a step of 5px, eg: 5,10,15
+                    </p>
+                    <p>Other options:</p>
+                    <p>To remove margin from a HTML element add the class</p><code>no-margin</code>
+                    <br>
+                    <br>
+                    <h4>Paddings</h4>
+                    <p>You can add this helper class to any element in your HTML code to set paddings</p>
+                    <table class="table table-bordered table-condensed table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th>First Prefix ( p*)</th>
+                                <th>Second Prefix(pt/b/l/r*)</th>
+                                <th>Last Prefix(pt-$value)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>p for padding</td>
+                                <td>t : top, b : bottom, l : left, r : right</td>
+                                <td>5,10,15,20, ... 150</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>example :</p><code>pt-10</code>
+                    <span>which means padding Top 10px</span>
+                    <br><code>pb-20</code>
+                    <span>which means padding Bottom 20px</span>
+                    <br><code>pl-5</code>
+                    <span>which means padding Left 5px</span>
+                    <br><code>pr-35</code>
+                    <span>which means padding Right 35px</span>
+                    <br>
+                    <p>
+                        <label class="label label-danger">Note:</label>Value can not be anything, 1,2,4,5,6. It has a step of 5px, eg: 5,10,15
+                    </p>
+                </section>
+     
+                <section id="grid">
+                    <h1>Grid</h1>
+                    <p>
+                        Bootstrap grid includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating
+                        more semantic layouts
+                    </p>
+                    <p>Grid systems are used for creating page layouts through a series of rows and columns that house your content. Here's how the Bootstrap grid system works:</p>
+                    <ul>
+                        <li>You must start with<code>row</code>
+                        </li>
+                        <li>There are pre-define classes of columns starting from 1 to 12, example<code>col-md-1</code> to<code>col-md-12</code>
+                        </li>
+                        <li>Each of these value represent a percentage of the screen, 1 being the smallest and 12 being 100%</li>
+                        <li>You can create different grid pattern that finally forms 12</li>
+                    </ul>
+                    <p>For more information about Bootstrap, visit:
+                        <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+                    </p>
+                    <p>example :</p>
+                    <pre class="brush: html;"><div class="row">
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+    <div class="col-md-1">.col-md-1</div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">.col-md-8</div>
+    <div class="col-md-4">.col-md-4</div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+    <div class="col-md-4">.col-md-4</div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">.col-md-6</div>
+    <div class="col-md-6">.col-md-6</div>
+</div></pre>
+                    <br>
+                    <p>
+                        <span class="label label-danger">Note</span>Bootstrap includes different grids for different screen sizes, "col-md" md stands for medium screen, the following table explains:</p>
+                    <table class="table table-bordered table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Extra small devices
+                                    <small>Phones (
+                                        <768px)</small>
+                                </th>
+                                <th>Small devices
+                                    <small>Tablets (≥768px)</small>
+                                </th>
+                                <th>Medium devices
+                                    <small>Desktops (≥992px)</small>
+                                </th>
+                                <th>Large devices
+                                    <small>Desktops (≥1200px)</small>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-nowrap">Grid behavior
+                                    <td>Horizontal at all times</td>
+                                    <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Container width
+                                    <td>None (auto)</td>
+                                    <td>750px</td>
+                                    <td>970px</td>
+                                    <td>1170px</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Class prefix
+                                    <td><code>.col-xs-</code>
+                                    </td>
+                                    <td><code>.col-sm-</code>
+                                    </td>
+                                    <td><code>.col-md-</code>
+                                    </td>
+                                    <td><code>.col-lg-</code>
+                                    </td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap"># of columns
+                                    <td colspan="4">12</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Column width
+                                    <td class="text-muted">Auto</td>
+                                    <td>~62px</td>
+                                    <td>~81px</td>
+                                    <td>~97px</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Gutter width
+                                    <td colspan="4">30px (15px on each side of a column)</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Nestable
+                                    <td colspan="4">Yes</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Offsets
+                                    <td colspan="4">Yes</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="text-nowrap">Column ordering
+                                    <td colspan="4">Yes</td>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="browser-support">
+                    <h1>Browser Support</h1>
+                    <p>Clarimy Business Template is built keeping mind to support a wide range of browsers and devices. We all major browers Google Chrome, Mozilla Firefox, Safari, Opera, Internet Explorer 9 and Above</p>
+                    <p></p>
+                    <br>
+                    <table class="table table-bordered table-striped table-condensed table-responsive">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <th>Chrome</th>
+                                <th>Firefox</th>
+                                <th>Internet Explorer</th>
+                                <th>Opera</th>
+                                <th>Safari</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Android
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-muted" rowspan="3" style="vertical-align: middle;">N/A</td>
+                                    <td class="text-danger">
+                                        <span class="glyphicon glyphicon-remove"></span>Not Supported</td>
+                                    <td class="text-muted">N/A</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>iOS
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-muted">N/A</td>
+                                    <td class="text-danger">
+                                        <span class="glyphicon glyphicon-remove"></span>Not Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Mac OS X
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Windows
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-success">
+                                        <span class="glyphicon glyphicon-ok"></span>Supported</td>
+                                    <td class="text-danger">
+                                        <span class="glyphicon glyphicon-remove"></span>Not Supported</td>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section id="creadits">
+                    <h1>Source & Credits</h1>
+                    <p>
+                        All images are only for demonstration purpose, however you can re-download them in sites below. Almost all (not including overclothing.com, Daniel Zenda, Freepik etc...) images are released free of copyrights under Creative Commons CC0.
+                    </p>
+                    <br>
+                    <br>
+                    <h4>Images & Mockups</h4>
+                    <ul>
+                        <li>All Free Stocks
+                            <a target="_blank" href="allthefreestock.com">http://allthefreestock.com</a>
+                        </li>
+                        <li>Pexels
+                            <a target="_blank" href="https://www.pexels.com/">https://www.pexels.com/</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <h4>Scripts</h4>
+                    <ul>
+                        <li>
+                      jQuery
+                            <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a>
+                        </li>
+                        <li>Owl Carousel v2
+                            <a target="_blank" href="http://www.owlcarousel.owlgraphic.com/">http://www.owlcarousel.owlgraphic.com/</a>
+                        </li>
+                        <li>Jquery Easing
+                            <a target="_blank" href="https://jqueryui.com/easing/">https://jqueryui.com/easing/</a>
+                        </li>
+                        <li>Slick JS
+                            <a target="_blank" href="http://kenwheeler.github.io/slick/">http://kenwheeler.github.io/slick/</a>
+                        </li>
+                        <li>Magnific Popup
+                            <a target="_blank" href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                    <h4>CSS & Fonts</h4>
+                    <ul>
+                        <li>Bootstrap Framework
+                            <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+                        </li>
+                        <li>Animation
+                            <a target="_blank" href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a>
+                        </li>
+                        <li>Font Awesome
+                            <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a>
+                        </li>
+                        <li>Google Fonts
+                            <a target="_blank" href="https://www.google.com/fonts">https://www.google.com/fonts</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="template-support">
+                    <h1>Template support</h1>
+                    <p>Support includes bugs fixing, and general problem solving with features explained on the template’s official sales page.</p>
+                    <br/> 
+                    <br/>  
+                    <h1>Enjoy your purchase!</h1>
+                    <p>Once again, thank you so much for purchasing this template. We'd be glad to help you if you have any questions relating to this template. We'll do our best to assist. If you have a more general question relating to the themes on WrapBootstrap, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!--
+    Javascripts
+    ==================================================
+    -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="vendor/syntaxhighlighter/scripts/shCore.js"></script>
+    <script src="vendor/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+    <script src="vendor/syntaxhighlighter/scripts/shBrushCss.js"></script>
+    <script src="vendor/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+    <script src="vendor/syntaxhighlighter/scripts/shBrushXml.js"></script>
+    <script>
+        SyntaxHighlighter.all();
+    </script>
+    <!--
+    End Document
+    ==================================================
+    -->
+</body>
+
+</html>

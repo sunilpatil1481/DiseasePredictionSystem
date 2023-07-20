@@ -1,0 +1,79 @@
+/*--------------------------------*/
+/* Thumbnails Bottom Center
+/*--------------------------------*/
+/* Background Color Of Carousel */
+.thumb_btm_cntr.carousel{
+  background: #464a4b;
+}
+/* Background Images */
+.thumb_btm_cntr .carousel-inner > .carousel-item > a > img,
+.thumb_btm_cntr .carousel-inner > .carousel-item > img{
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+/*------------------------------------------------------------------*/
+/*---------------- Thumbnails Indicators Properties ----------------*/
+/*------------------------------------------------------------------*/
+.ps_indicators_thumb li{
+  width: 120px;     			 /* Change Width  Of Thumbnails */
+    		 /* Change Height Of Thumbnails */
+  background: transparent;   /* Change Background Of Thumbnails */
+  border: 1px solid #3e4243; /* Change Border Style Of Thumbnails */
+}
+.ps_indicators_thumb li.active{
+  width: 120px;     			 /* Change Width  Of Thumbnails */
+    		 /* Change Height Of Thumbnails */
+  background: transparent;   /* Change Background Of Thumbnails */
+  border: 1px solid #a2a4a5; /* Change Border Style Of Thumbnails */
+}
+/* Thumbnails Image */
+.ps_indicators_thumb li img{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: block;
+}
+/*--------------------------------------------------------------*/
+/*---------------- Simple Indicators Properties ----------------*/
+/*--------------------------------------------------------------*/
+.ps_indicators_simple li{
+  width: 30px;						/* Change Width  Of Thumbnails */
+  height: 3px;						/* Change Height Of Thumbnails */
+  background: rgba(255,255,255,0.5);/* Change Background Of Thumbnails */
+  border-style: none;				/* Change Border Style Of Thumbnails */
+}
+.ps_indicators_simple li.active{
+  width: 30px;						/* Change Width  Of Thumbnails */
+  height: 3px;						/* Change Height Of Thumbnails */
+  background: rgba(255,255,255,1);	/* Change Background Of Thumbnails */
+  border-style: none;				/* Change Border Style Of Thumbnails */
+}
+/*------------------------------------------------------------------*/
+/*------------ Navigation Buttons Left/Right Properties ------------*/
+/*------------------------------------------------------------------*/
+.ps_control_left,
+.ps_control_left:focus,
+.ps_control_right,
+.ps_control_right:focus{
+  opacity: 1; 			/* Change Opacity    of Navigation Buttons */
+  width: 50px; 			/* Change Width      of Navigation Buttons */
+  height: 50px;			/* Change Height     of Navigation Buttons */
+  color: #3e4243;		/* Change Color      of Navigation Buttons */
+  font-size: 30px;		/* Change FontSize   of Navigation Buttons */
+  background: #a2a4a5;	/* Change background of Navigation Buttons */
+}
+.ps_control_left:hover,
+.ps_control_right:hover{
+  opacity: 1; 			/* Change Opacity    of Navigation Buttons */
+  color: #fff;			/* Change Color      of Navigation Buttons */
+  background: #3e4243;	/* Change background of Navigation Buttons */
+}
+
+
+
+
+/* Here You Can Write Your Own CSS */
+
+
+

@@ -1,0 +1,302 @@
+/*
+	StyleSheet For Responsive Bootstrap Carousel 4
+	Author: szthemes
+	Item Name: Responsive Bootstrap Carousel 4
+	Author URI: http://codecanyon.net/user/szthemes
+	Description: Different Types of Bootstrap Carousel 4
+
+  ------------------------------------------------------------------
+							Fonts Styles
+  ------------------------------------------------------------------
+	'Roboto', sans-serif -------------------------------- 01
+		   FontAwesome ---------------------------------- 02
+  ------------------------------------------------------------------
+							Color Codes
+  ------------------------------------------------------------------
+	NAME    ------------------------RGB-------------------------- #
+	#ffffff -------------------rgb(255, 255, 255)---------------- 01
+	#000000 -------------------rgb(0, 0, 0)---------------------- 02
+	#282828 -------------------rgb(40, 40, 40)------------------- 03
+	#cc181e -------------------rgb(204, 24, 30)------------------ 04 	Replace Also This Color To Change Whole Color Scheme
+	#689f38 -------------------rgb(104, 159, 56)----------------- 05 	Replace Also This Color To Change Whole Color Scheme
+	#feb600 -------------------rgb(254, 182, 0)------------------ 06
+	#eeeeee -------------------rgb(238, 238, 238)---------------- 07
+	#767676 -------------------rgb(118, 118, 118)---------------- 08
+*/
+
+/*------------------------------------------------------*/
+/* GP PRODUCT ADVANCE CAROUSEL
+/*------------------------------------------------------*/
+.gp_products_carousel_wrapper{
+  overflow: hidden;
+}
+.gp_products_carousel_wrapper .carousel-item > .row{
+  margin: 0;
+}
+/*---------- HEADER ----------*/
+.gp_products_carousel_header{
+  font-size: 2em;
+  font-weight: 100;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  padding-right: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.gp_products_carousel_header > a,
+.gp_products_carousel_header > a:visited{
+  font-size: 14px;
+  margin-top: 3px;
+  font-weight: 300;
+  text-align: center;
+  text-decoration: none;
+  padding: 7px 15px 7px 15px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+}
+/*---------- LEFT/RIGHT CONTROL ----------*/
+.gp_products_carousel_control_left,
+.gp_products_carousel_control_right{
+  top: 45%;
+  z-index: 2;
+  opacity: 0;
+  width: 30px;
+  height: 65px;
+  border: none;
+  text-shadow: none;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+}
+.gp_products_carousel_wrapper:hover .gp_products_carousel_control_left,
+.gp_products_carousel_wrapper:hover .gp_products_carousel_control_right{
+  opacity: 0.5;
+}
+.gp_products_carousel_control_icons{
+  font-size: 20px;
+  line-height: 65px;
+}
+.gp_products_carousel_control_left{
+  left: 1% !important;
+}
+.gp_products_carousel_control_right{
+  right: 1% !important;
+}
+/*---------- CAPTION ----------*/
+.gp_products_item{
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+.gp_products_inner{
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+.gp_products_item_image{
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  transition: all .25s ease;
+  -webkit-transition: all .25s ease;
+}
+.gp_products_item_image > a > img{
+  width: 100%;
+}
+/*---------- TEXT ----------*/
+.gp_products_item_caption{
+  padding: 15px 15px 10px 15px;
+}
+.gp_products_item_caption a,
+.gp_products_item_caption a:visited{
+  text-decoration: none;
+  transition: all ease-in-out 0.3s;
+  -webkit-transition: all ease-in-out 0.3s;
+}
+.gp_products_item_caption > ul{
+  padding: 0px;
+  list-style-type: none;
+}
+.gp_products_caption_name > li:nth-child(1) > a{
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+.gp_products_caption_name > li:nth-child(2) > a{
+  font-size: 13px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+}
+.gp_products_caption_rating >li{
+  font-size: 12px;
+  display: inline-block;
+}
+.gp_products_caption_rating > li > a{
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*------------------------------------------------------*/
+/* COLORS (MIX)
+/*------------------------------------------------------*/
+
+.gp_products_carousel_wrapper{
+
+}
+/*---------- HEADER ----------*/
+.gp_products_carousel_header > a,
+.gp_products_carousel_header > a:visited{
+  color: #ffffff;
+  background: #689f38;
+}
+.gp_products_carousel_header > a:hover,
+.gp_products_carousel_header > a:active{
+  background: #cc181e;
+}
+/*---------- LEFT/RIGHT CONTROL ----------*/
+.gp_products_carousel_control_left,
+.gp_products_carousel_control_left:hover,
+.gp_products_carousel_control_left:active,
+.gp_products_carousel_control_left:focus,
+.gp_products_carousel_control_right,
+.gp_products_carousel_control_right:hover,
+.gp_products_carousel_control_right:active,
+.gp_products_carousel_control_right:focus{
+  color: #ffffff;
+  background: #282828;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+/*---------- CAPTION ----------*/
+.gp_products_item_caption > ul > li{
+  color: #767676;
+}
+.gp_products_inner{
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.gp_products_inner:hover .gp_products_item_image{
+  background: rgba(0,0,0,0.4);
+}
+.gp_products_caption_name > li:nth-child(1) > a{
+      color: #282828;
+    font-weight: 600;
+    font-size: 16px;
+}
+.gp_products_caption_name > li:nth-child(2) > a{
+  color: #282828;
+}
+.gp_products_caption_rating > li > i{
+  color: #feb600;
+}
+.gp_products_caption_rating > li > a{
+  color: #689f38;
+}
+.gp_products_item_caption a:hover,
+.gp_products_item_caption a:active,
+.gp_products_caption_name li a:hover,
+.gp_products_caption_name li a:active{
+  color: #cc181e;
+}
+/*------------------------------------------------------*/
+/* SLIDING TIMING FUNCTIONS
+/*------------------------------------------------------*/
+/*---------- ps_ease ----------*/
+.ps_ease .carousel-item{
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/*---------- ps_easeInOut ----------*/
+.ps_easeInOut .carousel-item{
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/*---------- ps_speedy ----------*/
+.ps_speedy .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(0,1,0,1);
+  transition-timing-function: cubic-bezier(0,1,0,1);
+}
+/*---------- ps_slowSpeedy ----------*/
+.ps_slowSpeedy .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(0.3,1,0,1);
+  transition-timing-function: cubic-bezier(0.3,1,0,1);
+}
+/*---------- ps_easeOutInCubic ----------*/
+.ps_easeOutInCubic .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(0.22,0.81,0.01,0.99);
+  transition-timing-function: cubic-bezier(0.22,0.81,0.01,0.99);
+}
+/*---------- ps_swing ----------*/
+.ps_swing .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.02,.01,.47,1);
+  transition-timing-function: cubic-bezier(.02,.01,.47,1);
+}
+/*---------- ps_easeOutCubic ----------*/
+.ps_easeOutCubic .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+/*---------- ps_easeInOutCubic ----------*/
+.ps_easeInOutCubic .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.645,.045,.355,1);
+  transition-timing-function: cubic-bezier(.645,.045,.355,1);
+}
+/*---------- ps_easeOutCirc ----------*/
+.ps_easeOutCirc .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.075,.82,.165,1);
+  transition-timing-function: cubic-bezier(.075,.82,.165,1);
+}
+/*---------- ps_easeOutExpo ----------*/
+.ps_easeOutExpo .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
+  transition-timing-function: cubic-bezier(.19,1,.22,1);
+}
+/*---------- ps_easeInQuad ----------*/
+.ps_easeInQuad .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.55,.085,.68,.53);
+  transition-timing-function: cubic-bezier(.55,.085,.68,.53);
+}
+/*---------- ps_easeOutQuad ----------*/
+.ps_easeOutQuad .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+  transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+}
+/*---------- ps_easeInOutQuad ----------*/
+.ps_easeInOutQuad .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+  transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+}
+/*---------- ps_easeOutQuart ----------*/
+.ps_easeOutQuart .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.165,.84,.44,1);
+  transition-timing-function: cubic-bezier(.165,.84,.44,1);
+}
+/*---------- ps_easeInOutQuart ----------*/
+.ps_easeInOutQuart .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.77,0,.175,1);
+  transition-timing-function: cubic-bezier(.77,0,.175,1);
+}
+/*---------- ps_easeOutQuint ----------*/
+.ps_easeOutQuint .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.23,1,.32,1);
+  transition-timing-function: cubic-bezier(.23,1,.32,1);
+}
+/*---------- ps_easeInSine ----------*/
+.ps_easeInSine .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.47,0,.745,.715);
+  transition-timing-function: cubic-bezier(.47,0,.745,.715);
+}
+/*---------- ps_easeOutSine ----------*/
+.ps_easeOutSine .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.39,.575,.565,1);
+  transition-timing-function: cubic-bezier(.39,.575,.565,1);
+}
+/*---------- ps_easeInOutSine ----------*/
+.ps_easeInOutSine .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+  transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+}
+/*---------- END ----------*/

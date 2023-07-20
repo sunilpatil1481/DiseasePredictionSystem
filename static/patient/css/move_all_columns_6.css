@@ -1,0 +1,67 @@
+/*-----------------------------------*/
+/* 6 Columns Show, Move All At Once
+/*-----------------------------------*/
+/* Background Color Of Carousel */
+.columns_move_all.carousel{
+  background: transparent;
+  padding: 0px 140px;
+  margin-top: -99px;
+}
+.columns_move_all > .carousel-inner > .carousel-item{
+  width: 100%;
+}
+/* Background Images */
+.columns_move_all > .carousel-inner > .carousel-item > .row > div > .s_img img,
+.columns_move_all > .carousel-inner > .carousel-item > .row > div > a > .s_img img{
+   padding :0px 20px 0px 20px;
+   margin-bottom: 10px;
+   margin-top: 10px;
+    
+}
+
+.s_img{
+  width: 100%;
+    margin: auto;
+    display: block;
+    padding: 15px !important;
+    background: #f4f4f4;
+    box-shadow: 0px 0px 40px 0px rgba(176, 176, 176, 0.12);
+    text-align: center;
+}
+/*---------------------------------------------*/
+/*---------------- Grid System ----------------*/
+/*---------------------------------------------*/
+.columns_move_all > .carousel-inner > .carousel-item > .row{
+  margin: 0;
+}
+.columns_move_all > .carousel-inner > .carousel-item > .row > div{
+  padding: 24px;  /* Change Padding Of Columns */
+}
+/*------------------------------------------------------------------*/
+/*------------ Navigation Buttons Left/Right Properties ------------*/
+/*------------------------------------------------------------------*/
+.ps_control_left,
+.ps_control_left:focus,
+.ps_control_right,
+.ps_control_right:focus{
+  opacity: 1; 			/* Change Opacity    of Navigation Buttons */
+  width: 50px; 			/* Change Width      of Navigation Buttons */
+  height: 50px;			/* Change Height     of Navigation Buttons */
+  color: #3e4243;		/* Change Color      of Navigation Buttons */
+  font-size: 30px;		/* Change FontSize   of Navigation Buttons */
+  background: #a2a4a5;	/* Change background of Navigation Buttons */
+}
+.ps_control_left:hover,
+.ps_control_right:hover{
+  opacity: 1; 			/* Change Opacity    of Navigation Buttons */
+  color: #fff;			/* Change Color      of Navigation Buttons */
+  background: #3e4243;	/* Change background of Navigation Buttons */
+}
+
+
+
+
+/* Here You Can Write Your Own CSS */
+
+
+

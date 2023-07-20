@@ -1,0 +1,997 @@
+/*--------------------------------------------*/
+/*---------------- Indicators ----------------*/
+/*--------------------------------------------*/
+/* Default Properties For All Indicators */
+.ps_indicators_simple,
+.ps_indicators_thumb{
+  padding: 0;
+  font-size: 0;
+  display: block;
+}
+.ps_indicators_simple li:before,
+.ps_indicators_simple li:after,
+.ps_indicators_thumb li:before,
+.ps_indicators_thumb li:after{
+  display: none;
+}
+.ps_indicators_simple li,
+.ps_indicators_thumb li{
+  margin: 4px;
+}
+.ps_indicators_simple li.active,
+.ps_indicators_thumb li.active{
+  margin: 4px;
+}
+.ps_indicators_simple::-webkit-scrollbar,
+.ps_indicators_thumb::-webkit-scrollbar{
+  margin: 0;
+  padding: 0;
+  width: 5px;
+  height: 5px;
+  background: #3e4243;
+}
+.ps_indicators_simple::-webkit-scrollbar-thumb,
+.ps_indicators_thumb::-webkit-scrollbar-thumb{
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #a2a4a5;
+}
+/* Default Properties For All Thumbnails Images */
+.ps_indicators_thumb li{
+  width: 75px;
+  height: 75px;
+  border: 1px solid #3e4243;
+  background: transparent;
+}
+.ps_indicators_thumb li.active{
+  width: 75px;
+  height: 75px;
+  border: 1px solid #a2a4a5;
+  background: transparent;
+}
+.ps_indicators_thumb li img{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: block;
+}
+.ps_indicators_simple li img{
+  display: none;
+}
+/*---------------------*/
+/* Bottom Positioning
+/*---------------------*/
+/* Bottom And Center */
+.ps_indicators_simple.ps_indicators_bottom_center,
+.ps_indicators_thumb.ps_indicators_bottom_center{
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 95%;
+  bottom: 20px;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  white-space: nowrap;
+}
+.ps_indicators_simple.ps_indicators_bottom_center li,
+.ps_indicators_thumb.ps_indicators_bottom_center li{
+  display: inline-block;
+}
+/* Bottom And Left */
+.ps_indicators_simple.ps_indicators_bottom_left,
+.ps_indicators_thumb.ps_indicators_bottom_left{
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 95%;
+  bottom: 20px;
+  margin: 0 auto;
+  text-align: left;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.ps_indicators_simple.ps_indicators_bottom_left li,
+.ps_indicators_thumb.ps_indicators_bottom_left li{
+  display: inline-block;
+}
+/* Bottom And Left */
+.ps_indicators_simple.ps_indicators_bottom_right,
+.ps_indicators_thumb.ps_indicators_bottom_right{
+  left: 0;
+  right: 0;
+  top: auto;
+  width: 95%;
+  bottom: 20px;
+  margin: 0 auto;
+  overflow-x: auto;
+  text-align: right;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.ps_indicators_simple.ps_indicators_bottom_right li,
+.ps_indicators_thumb.ps_indicators_bottom_right li{
+  display: inline-block;
+}
+/*---------------------*/
+/* Top Positioning
+/*---------------------*/
+/* Top And Center */
+.ps_indicators_simple.ps_indicators_top_center,
+.ps_indicators_thumb.ps_indicators_top_center{
+  left: 0;
+  right: 0;
+  top: 20px;
+  width: 95%;
+  bottom: auto;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+  white-space: nowrap;
+}
+.ps_indicators_simple.ps_indicators_top_center li,
+.ps_indicators_thumb.ps_indicators_top_center li{
+  display: inline-block;
+}
+/* Top And Left */
+.ps_indicators_simple.ps_indicators_top_left,
+.ps_indicators_thumb.ps_indicators_top_left{
+  left: 0;
+  right: 0;
+  top: 20px;
+  width: 95%;
+  bottom: auto;
+  margin: 0 auto;
+  text-align: left;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.ps_indicators_simple.ps_indicators_top_left li,
+.ps_indicators_thumb.ps_indicators_top_left li{
+  display: inline-block;
+}
+/* Top And Left */
+.ps_indicators_simple.ps_indicators_top_right,
+.ps_indicators_thumb.ps_indicators_top_right{
+  left: 0;
+  right: 0;
+  top: 20px;
+  width: 95%;
+  bottom: auto;
+  margin: 0 auto;
+  overflow-x: auto;
+  text-align: right;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.ps_indicators_simple.ps_indicators_top_right li,
+.ps_indicators_thumb.ps_indicators_top_right li{
+  display: inline-block;
+}
+/*---------------------*/
+/* Left Positioning
+/*---------------------*/
+/* Left And Center */
+.ps_indicators_simple.ps_indicators_left_center,
+.ps_indicators_thumb.ps_indicators_left_center{
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  height: 45%;
+  right: auto;
+  margin: auto 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ps_indicators_simple.ps_indicators_left_center li,
+.ps_indicators_thumb.ps_indicators_left_center li{
+  display: block;
+}
+/* Left And Top */
+.ps_indicators_simple.ps_indicators_left_top,
+.ps_indicators_thumb.ps_indicators_left_top{
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  right: auto;
+  height: 90%;
+  margin: auto 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ps_indicators_simple.ps_indicators_left_top li,
+.ps_indicators_thumb.ps_indicators_left_top li{
+  display: block;
+}
+/*---------------------*/
+/* Right Positioning
+/*---------------------*/
+/* Right And Center */
+.ps_indicators_simple.ps_indicators_right_center,
+.ps_indicators_thumb.ps_indicators_right_center{
+  top: 0;
+  bottom: 0;
+  left: auto;
+  height: 45%;
+  right: 20px;
+  margin: auto 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ps_indicators_simple.ps_indicators_right_center li,
+.ps_indicators_thumb.ps_indicators_right_center li{
+  display: block;
+}
+/* Right And Top */
+.ps_indicators_simple.ps_indicators_right_top,
+.ps_indicators_thumb.ps_indicators_right_top{
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 20px;
+  height: 90%;
+  margin: auto 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ps_indicators_simple.ps_indicators_right_top li,
+.ps_indicators_thumb.ps_indicators_right_top li{
+  display: block;
+}
+/*--------------------------------------------*/
+/*------------ Navigation Buttons ------------*/
+/*--------------------------------------------*/
+/* Default Properties For All Navigation Buttons */
+.carousel-control-next,
+.carousel-control-prev{
+  z-index: 3;
+}
+/*------------------------------*/
+/* Top Left & Right Positioning
+/*------------------------------*/
+.ps_control_left.ps_top_left_right{
+  top: 15px;
+  left: 15px;
+}
+.ps_control_right.ps_top_left_right{
+  top: 15px;
+  right: 15px;
+}
+/*-----------------------*/
+/* Top Left Positioning
+/*-----------------------*/
+/* Horizontal */
+.ps_control_left.ps_top_left_x{
+  top: 15px;
+  left: 15px;
+}
+.ps_control_right.ps_top_left_x{
+  top: 15px;
+  left: 70px;
+}
+/* Vertical */
+.ps_control_left.ps_top_left_y{
+  top: 15px;
+  left: 15px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ps_control_right.ps_top_left_y{
+  top: 70px;
+  left: 15px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*------------------------*/
+/* Top Center Positioning
+/*------------------------*/
+.ps_control_left.ps_top_center{
+  top: 15px;
+  left: 47%;
+}
+.ps_control_right.ps_top_center{
+  top: 15px;
+  left: 47%;
+  margin-left: 55px;
+}
+/*-----------------------*/
+/* Top Right Positioning
+/*-----------------------*/
+/* Horizontal */
+.ps_control_left.ps_top_right_x{
+  top: 15px;
+  left: auto;
+  right: 70px;
+}
+.ps_control_right.ps_top_right_x{
+  top: 15px;
+  left: auto;
+  right: 15px;
+}
+/* Vertical */
+.ps_control_left.ps_top_right_y{
+  top: 15px;
+  left: auto;
+  right: 15px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ps_control_right.ps_top_right_y{
+  top: 70px;
+  left: auto;
+  right: 15px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*------------------------------*/
+/* Top Left & Right Positioning
+/*------------------------------*/
+.ps_control_left.ps_bottom_left_right{
+  top: auto;
+  left: 15px;
+  bottom: 15px;
+}
+.ps_control_right.ps_bottom_left_right{
+  top: auto;
+  right: 15px;
+  bottom: 15px;
+}
+/*-----------------------*/
+/* Top Left Positioning
+/*-----------------------*/
+/* Horizontal */
+.ps_control_left.ps_bottom_left_x{
+  top: auto;
+  left: 15px;
+  bottom: 15px;
+}
+.ps_control_right.ps_bottom_left_x{
+  top: auto;
+  left: 70px;
+  bottom: 15px;
+}
+/* Vertical */
+.ps_control_left.ps_bottom_left_y{
+  top: auto;
+  left: 15px;
+  bottom: 70px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ps_control_right.ps_bottom_left_y{
+  top: auto;
+  left: 15px;
+  bottom: 15px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*------------------------*/
+/* Top Center Positioning
+/*------------------------*/
+.ps_control_left.ps_bottom_center{
+  top: auto;
+  left: 47%;
+  bottom: 15px;
+}
+.ps_control_right.ps_bottom_center{
+  top: auto;
+  left: 47%;
+  bottom: 15px;
+  margin-left: 55px;
+}
+/*-----------------------*/
+/* Top Right Positioning
+/*-----------------------*/
+/* Horizontal */
+.ps_control_left.ps_bottom_right_x{
+  top: auto;
+  left: auto;
+  right: 70px;
+  bottom: 15px;
+}
+.ps_control_right.ps_bottom_right_x{
+  top: auto;
+  left: auto;
+  right: 15px;
+  bottom: 15px;
+}
+/* Vertical */
+.ps_control_left.ps_bottom_right_y{
+  top: auto;
+  left: auto;
+  right: 15px;
+  bottom: 70px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ps_control_right.ps_bottom_right_y{
+  top: auto;
+  left: auto;
+  right: 15px;
+  bottom: 15px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*------------------------------*/
+/* Right Positioning
+/*------------------------------*/
+/* Vertical */
+.ps_control_left.ps_right_y{
+  top: auto;
+  left: auto;
+  right: 15px;
+  bottom: 43%;
+  margin-bottom: 60px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ps_control_right.ps_right_y{
+  top: auto;
+  left: auto;
+  right: 15px;
+  bottom: 43%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*------------------------------*/
+/* Left Positioning
+/*------------------------------*/
+/* Vertical */
+.ps_control_left.ps_left_y{
+  top: auto;
+  left: 15px;
+  right: auto;
+  bottom: 43%;
+  margin-bottom: 60px;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ps_control_right.ps_left_y{
+  top: auto;
+  left: 15px;
+  right: auto;
+  bottom: 43%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+/*------------------------------*/
+/* Left & Right Positioning
+/*------------------------------*/
+.ps_control_left.ps_left_right{
+  top: 50%;
+  left: 15px;
+}
+.ps_control_right.ps_left_right{
+  top: 50%;
+  right: 15px;
+}
+/*--------------------------------*/
+/* Bootstrap 4 Navigation Buttons
+/*--------------------------------*/
+.ps_b4_navigation.carousel-control-prev,
+.ps_b4_navigation.carousel-control-next{
+  font-size: 30px;
+}
+/*--------------------------------*/
+/* Bootstrap 3 Navigation Buttons
+/*--------------------------------*/
+/* Left And Right Control Buttons */
+.ps_b3_navigation.carousel-control-prev,
+.ps_b3_navigation.carousel-control-next{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  color: #fff;
+  z-index: 3;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0);
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.ps_b3_navigation.carousel-control-prev{
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .5)), to(rgba(0, 0, 0, .0001)));
+  background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.ps_b3_navigation.carousel-control-next{
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .5)));
+  background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+  background-repeat: repeat-x;
+}
+.ps_b3_navigation.carousel-control-prev:hover,
+.ps_b3_navigation.carousel-control-next:hover,
+.ps_b3_navigation.carousel-control-prev:focus,
+.ps_b3_navigation.carousel-control-next:focus{
+  color: #fff;
+  text-decoration: none;
+  filter: alpha(opacity=90);
+  outline: 0;
+  opacity: .9;
+}
+/*--------------------------------------------*/
+/*--------- SLIDING TIMING FUNCTIONS ---------*/
+/*--------------------------------------------*/
+/*----- ps_ease -----*/
+.ps_ease .carousel-item{
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/*----- ps_easeInOut -----*/
+.ps_easeInOut .carousel-item{
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/*----- ps_speedy -----*/
+.ps_speedy .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(0,1,0,1);
+  transition-timing-function: cubic-bezier(0,1,0,1);
+}
+/*----- ps_slowSpeedy -----*/
+.ps_slowSpeedy .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(0.3,1,0,1);
+  transition-timing-function: cubic-bezier(0.3,1,0,1);
+}
+/*----- ps_easeOutInCubic -----*/
+.ps_easeOutInCubic .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(0.22,0.81,0.01,0.99);
+  transition-timing-function: cubic-bezier(0.22,0.81,0.01,0.99);
+}
+/*----- ps_swing -----*/
+.ps_swing .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.02,.01,.47,1);
+  transition-timing-function: cubic-bezier(.02,.01,.47,1);
+}
+/*----- ps_easeOutCubic -----*/
+.ps_easeOutCubic .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+}
+/*----- ps_easeInOutCubic -----*/
+.ps_easeInOutCubic .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.645,.045,.355,1);
+  transition-timing-function: cubic-bezier(.645,.045,.355,1);
+}
+/*----- ps_easeOutCirc -----*/
+.ps_easeOutCirc .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.075,.82,.165,1);
+  transition-timing-function: cubic-bezier(.075,.82,.165,1);
+}
+/*----- ps_easeOutExpo -----*/
+.ps_easeOutExpo .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.19,1,.22,1);
+  transition-timing-function: cubic-bezier(.19,1,.22,1);
+}
+/*----- ps_easeInQuad -----*/
+.ps_easeInQuad .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.55,.085,.68,.53);
+  transition-timing-function: cubic-bezier(.55,.085,.68,.53);
+}
+/*----- ps_easeOutQuad -----*/
+.ps_easeOutQuad .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+  transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+}
+/*----- ps_easeInOutQuad -----*/
+.ps_easeInOutQuad .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+  transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+}
+/*----- ps_easeOutQuart -----*/
+.ps_easeOutQuart .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.165,.84,.44,1);
+  transition-timing-function: cubic-bezier(.165,.84,.44,1);
+}
+/*----- ps_easeInOutQuart -----*/
+.ps_easeInOutQuart .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.77,0,.175,1);
+  transition-timing-function: cubic-bezier(.77,0,.175,1);
+}
+/*----- ps_easeOutQuint -----*/
+.ps_easeOutQuint .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.23,1,.32,1);
+  transition-timing-function: cubic-bezier(.23,1,.32,1);
+}
+/*----- ps_easeInSine -----*/
+.ps_easeInSine .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.47,0,.745,.715);
+  transition-timing-function: cubic-bezier(.47,0,.745,.715);
+}
+/*----- ps_easeOutSine -----*/
+.ps_easeOutSine .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.39,.575,.565,1);
+  transition-timing-function: cubic-bezier(.39,.575,.565,1);
+}
+/*----- ps_easeInOutSine -----*/
+.ps_easeInOutSine .carousel-item{
+  -webkit-transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+  transition-timing-function: cubic-bezier(.445,.05,.55,.95);
+}
+/*--------------------------------------------*/
+/*--------- SLIDING ANIMATION EFFECTS --------*/
+/*--------------------------------------------*/
+/*---------- VERTICLE EFFECT ----------*/
+.ps_slide_y .carousel-inner{
+  height: 100%;
+}
+.ps_slide_y .carousel-item{
+  height: 100%;
+}
+.ps_slide_y .carousel-item-next.carousel-item-left,
+.ps_slide_y .carousel-item-prev.carousel-item-right {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.ps_slide_y .carousel-item-next,
+.ps_slide_y .active.carousel-item-right {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+  .ps_slide_y .carousel-item-next,
+  .ps_slide_y .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.ps_slide_y .carousel-item-prev,
+.ps_slide_y .active.carousel-item-left {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+@supports ((-webkit-transform-style: preserve-3d) or (transform-style: preserve-3d)) {
+  .ps_slide_y .carousel-item-prev,
+  .ps_slide_y .active.carousel-item-left {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+/*---------- ZOOM EFFECT ----------*/
+.ps_zoom_i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.ps_zoom_i .carousel-item {
+  top: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0 !important;
+  display: block !important;
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  transform: scale(3);
+  -webkit-transition: -webkit-transform 1.5s ease-in-out 0s, opacity ease-in-out 1.5s;
+  transition: transform 1.5s ease-in-out 0s, opacity ease-in-out 1.5s;
+}
+.ps_zoom_i .carousel-item:first-child {
+  top: auto;
+  position: relative;
+}
+.ps_zoom_i .carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 1.5s ease-in-out 0s, opacity ease-in-out 1.5s;
+  transition: transform 1.5s ease-in-out 0s, opacity ease-in-out 1.5s;
+}
+/*----- SPREAD EFFECT -----*/
+.ps_spread {
+  opacity: 1;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+}
+.ps_spread .carousel-item {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  display: block;
+  position: absolute;
+  -webkit-transform: scale3d(2,1,2);
+  transform: scale3d(2,1,2);
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+  transition: transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+}
+.ps_spread .carousel-item:first-child {
+  top: auto;
+  position: relative;
+}
+.ps_spread .carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+  transition: transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+}
+/*---------- SPREAD VERTICALLY EFFECT ----------*/
+.ps_spread_y {
+  opacity: 1;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+}
+.ps_spread_y .carousel-item {
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: block;
+  -webkit-transform: scale3d(1,2,1);
+  transform: scale3d(1,2,1);
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+  transition: transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+}
+.ps_spread_y .carousel-item:first-child {
+  top: auto;
+  position: relative;
+}
+.ps_spread_y .carousel-item.active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+  -webkit-transition: -webkit-transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+  transition: transform 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.5s;
+}
+/*---------- ROTATE AND SCALE CLOCK WISE EFFECT ----------*/
+.ps_rotate_scale_c{
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+.ps_rotate_scale_c .carousel-item{
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: block;
+  -webkit-transform: scale(2) rotate(45deg);
+  transform: scale(2) rotate(45deg);
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 2s;
+  transition: transform 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 2s;
+}
+.ps_rotate_scale_c .carousel-item:first-child{
+  top: auto;
+  position: relative;
+}
+.ps_rotate_scale_c .carousel-item.active{
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 2s;
+  transition: transform 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0s, opacity cubic-bezier(0.230, 1.000, 0.320, 1.000) 2s;
+}
+/*---------- ROTATE AND SCALE OUT EFFECT ----------*/
+.ps_rotate_scale_o {
+  opacity: 1;
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+}
+.ps_rotate_scale_o .carousel-item {
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: block;
+  -webkit-transform: scale(0) rotate(45deg);
+  transform: scale(0) rotate(45deg);
+  -webkit-transition: -webkit-transform 2.5s cubic-bezier(0.22,0.81,0.01,0.99) 0s, opacity cubic-bezier(0.22,0.81,0.01,0.99) 2.5s;
+  transition: transform 2.5s cubic-bezier(0.22,0.81,0.01,0.99) 0s, opacity cubic-bezier(0.22,0.81,0.01,0.99) 2.5s;
+}
+.ps_rotate_scale_o .carousel-item:first-child {
+  top: auto;
+  position: relative;
+}
+.ps_rotate_scale_o .carousel-item.active{
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  -webkit-transition: -webkit-transform 2.5s cubic-bezier(0.22,0.81,0.01,0.99) 0s, opacity cubic-bezier(0.22,0.81,0.01,0.99) 2.5s;
+  transition: transform 2.5s cubic-bezier(0.22,0.81,0.01,0.99) 0s, opacity cubic-bezier(0.22,0.81,0.01,0.99) 2.5s;
+}
+.kbrns_zoomIn .carousel-inner,
+.kbrns_zoomOutIn .carousel-inner,
+.kbrns_zoomInOut .carousel-inner,
+.kbrns_zoomIn .carousel-item,
+.kbrns_zoomOutIn .carousel-item,
+.kbrns_zoomInOut .carousel-item{
+  overflow: hidden !important;
+}
+/*------------------------------------------------------*/
+/* KEN BURNS ANIMATION EFFECTS
+/*------------------------------------------------------*/
+.kbrns_zoomInOut > .carousel-inner > .carousel-item > img,
+.kbrns_zoomInOut > .carousel-inner > .carousel-item > a > img{
+  -webkit-transform-origin: 100% 0%;
+  -moz-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  -o-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+  -webkit-animation: kbrns_zoomInOut 25s linear 0s infinite alternate;
+  -moz-animation: kbrns_zoomInOut 25s linear 0s infinite alternate;
+  -o-animation: kbrns_zoomInOut 25s linear 0s infinite alternate;
+  -ms-animation: kbrns_zoomInOut 25s linear 0s infinite alternate;
+  animation: kbrns_zoomInOut 25s linear 0s infinite alternate;
+}
+/*---------- ANIMATION ----------*/
+@-webkit-keyframes kbrns_zoomInOut{
+  0%{
+    -webkit-transform: scale(1);
+  }
+  100%{
+    -webkit-transform: scale(1.2);
+  }
+}
+@-moz-keyframes kbrns_zoomInOut{
+  0%{
+    -moz-transform: scale(1);
+  }
+  100%{
+    -moz-transform: scale(1.2);
+  }
+}
+@-ms-keyframes kbrns_zoomInOut{
+  0%{
+    -ms-transform: scale(1);
+  }
+  100%{
+    -ms-transform: scale(1.2);
+  }
+}
+
+@-o-keyframes kbrns_zoomInOut{
+  0%{
+    -o-transform: scale(1);
+  }
+  100%{
+    -o-transform: scale(1.2);
+  }
+}
+@keyframes kbrns_zoomInOut{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.2);
+  }
+}
+/*------------------------------------------------------*/
+/* KEN BURNS ANIMATION EFFECTS
+/*------------------------------------------------------*/
+.kbrns_zoomOutIn > .carousel-inner > .carousel-item > img,
+.kbrns_zoomOutIn > .carousel-inner > .carousel-item > a > img{
+  -webkit-transform-origin: 0;
+  -moz-transform-origin: 0;
+  -ms-transform-origin: 0;
+  -o-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-animation: kbrns_zoomOutIn 25s linear 0s infinite alternate;
+  -moz-animation: kbrns_zoomOutIn 25s linear 0s infinite alternate;
+  -o-animation: kbrns_zoomOutIn 25s linear 0s infinite alternate;
+  -ms-animation: kbrns_zoomOutIn 25s linear 0s infinite alternate;
+  animation: kbrns_zoomOutIn 25s linear 0s infinite alternate;
+}
+/*---------- ANIMATION ----------*/
+@-webkit-keyframes kbrns_zoomOutIn{
+  0%{
+    -webkit-transform: scale(1.3);
+  }
+  100%{
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes kbrns_zoomOutIn{
+  0%{
+    -moz-transform: scale(1.3);
+  }
+  100%{
+    -moz-transform: scale(1);
+  }
+}
+@-ms-keyframes kbrns_zoomOutIn{
+  0%{
+    -ms-transform: scale(1.3);
+  }
+  100%{
+    -ms-transform: scale(1);
+  }
+}
+
+@-o-keyframes kbrns_zoomOutIn{
+  0%{
+    -o-transform: scale(1.3);
+  }
+  100%{
+    -o-transform: scale(1);
+  }
+}
+@keyframes kbrns_zoomOutIn{
+  0%{
+    transform: scale(1.3);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+/*------------------------------------------------------*/
+/* KEN BURNS ANIMATION EFFECTS
+/*------------------------------------------------------*/
+.kbrns_zoomIn > .carousel-inner > .carousel-item > img,
+.kbrns_zoomIn > .carousel-inner > .carousel-item > a > img{
+  -webkit-animation: kbrns_zoomIn 25s linear 0s infinite alternate;
+  -moz-animation: kbrns_zoomIn 25s linear 0s infinite alternate;
+  -o-animation: kbrns_zoomIn 25s linear 0s infinite alternate;
+  -ms-animation: kbrns_zoomIn 25s linear 0s infinite alternate;
+  animation: kbrns_zoomIn 25s linear 0s infinite alternate;
+}
+/*---------- ANIMATION ----------*/
+@-webkit-keyframes kbrns_zoomIn{
+  0%{
+    -webkit-transform: scale(1);
+  }
+  100%{
+    -webkit-transform: scale(1.4);
+  }
+}
+@-moz-keyframes kbrns_zoomIn{
+  0%{
+    -moz-transform: scale(1);
+  }
+  100%{
+    -moz-transform: scale(1.4);
+  }
+}
+@-ms-keyframes kbrns_zoomIn{
+  0%{
+    -ms-transform: scale(1);
+  }
+  100%{
+    -ms-transform: scale(1.4);
+  }
+}
+
+@-o-keyframes kbrns_zoomIn{
+  0%{
+    -o-transform: scale(1);
+  }
+  100%{
+    -o-transform: scale(1.4);
+  }
+}
+@keyframes kbrns_zoomIn{
+  0%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1.4);
+  }
+}

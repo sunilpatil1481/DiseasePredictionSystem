@@ -1,0 +1,534 @@
+{% load static %}
+{% if mess %}
+<script>
+  alert('{{mess}}');
+</script>
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Grayrids">
+    <title>Medicator</title>
+	  <link rel="shortcut icon" href="{% static 'home/img/logo2.png' %}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/simple-line-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/owl.theme.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+	  <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
+	  		<!-- Magnific Popup Css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/responsive.css' %}">
+    <!-- Paradise Slider Main Style Sheet -->
+    <link href="{% static 'home/css/full_width_animated_layers_003.css' %}" rel="stylesheet" media="all">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div ><span id="msg"></span></div>
+  	<!-- Header Section Start -->
+    <header id="hero-area">    
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navba bg-white" id="white-bg">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/" style="font-size:30px;font-family: 'Poppins', sans-serif;color:#31bfc3">Medicator</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end ">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sign Up
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'sign_up_patient' %}">Patient</a></li>
+            <li><a class="dropdown-item" href="{% url 'sign_up_doctor' %}">Doctor</a></li>
+          </ul>
+        </li>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Login
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{% url 'sign_in_patient' %}">Patient</a></li>
+            <li><a class="dropdown-item" href="{% url 'sign_in_doctor' %}">Doctor</a></li>
+
+          </ul>
+        </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+
+      <!-- Mobile Menu Start -->
+      <ul class="mobile-menu">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#about">About Us</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li >
+          <a href="#">
+            Sign Up
+          </a>
+          <ul >
+            <li><a  href="{% url 'sign_up_patient' %}">Patient</a></li>
+            <li><a  href="{% url 'sign_up_doctor' %}">Doctor</a></li>
+          </ul>
+        </li>
+
+        <li >
+          <a href="#">
+            Login
+          </a>
+          <ul  aria-labelledby="navbarDropdown">
+            <li><a  href="{% url 'sign_in_patient' %}">Patient</a></li>
+            <li><a  href="{% url 'sign_in_doctor' %}">Doctor</a></li>
+
+          </ul>
+        </li>
+      </ul>
+      <!-- Mobile Menu End -->   
+       
+     
+	   <!-- Paradise Slider -->
+	<div id="fw_al_003" class="carousel slide carousel-fade ps_control_bsquare swipe_x ps_easeOutQuint" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+		
+		<!-- Wrapper For Slides -->
+		<div class="carousel-inner" role="listbox">
+
+			<!-- First Slide -->
+			<div class="carousel-item active">
+				<!-- Slide Background -->
+				<div class="overlay"></div>
+				<img class="img-fluid" src="{% static 'home/img/slider1.jpg' %}" alt="fw_al_003_01" />
+
+				<!-- Slide Text Layer -->
+				<div class="fw_al_003_slide">
+					<h1 data-animation="animated fadeInDown">We care about health care ...</h1>
+					<p data-animation="animated fadeIn">Healthy citizens are the greatest asset any country can have. Health is a large word. It embraces not the body only, but the mind and spirit as well; …and not today’s pain or pleasure alone, but the whole being and outlook of a man.</p>
+				</div>
+			</div>
+			<!-- End of Slide -->
+
+			<!-- Second Slide -->
+			<div class="carousel-item">
+
+				<!-- Slide Background -->
+				<div class="overlay"></div>
+				<img class="img-fluid" src="{% static 'home/img/slider2.jpg' %}" alt="fw_al_003_02" />
+
+				<!-- Slide Text Layer -->
+				<div class="fw_al_003_slide">
+					<h1 data-animation="animated fadeInDown">Prepare and prevent, don't repair and repent .</h1>
+					<p data-animation="animated fadeIn">Good health is not something we can buy. However, it can be an extremely valuable savings account.</p>
+				</div>
+			</div>
+			<!-- End of Slide -->
+
+			<!-- Third Slide -->
+			<div class="carousel-item">
+				<div class="overlay"></div>
+				<!-- Slide Background -->
+
+				<img class="img-fluid" src="{% static 'home/img/slider3.jpg' %}" alt="fw_al_003_03" />
+
+				<!-- Slide Text Layer -->
+				<div class="fw_al_003_slide">
+					<h1 data-animation="animated fadeInDown">Health is vehicle, Not a destination</h1>
+					<p data-animation="animated fadeIn">Keeping your body healthy is an expression of gratitude to the whole cosmos – the trees, the clouds, everything.</p>
+				</div>
+			</div>
+			<!-- End of Slide -->
+
+		</div><!-- End of Wrapper For Slides -->
+
+		<!-- Left Control -->
+		<a class="carousel-control-prev" href="#fw_al_003" data-slide="prev">
+			<span class="fa fa-angle-left" aria-hidden="true"></span>
+		</a>
+		<!-- Right Control -->
+		<a class="carousel-control-next" href="#fw_al_003" data-slide="next">
+			<span class="fa fa-angle-right" aria-hidden="true"></span>
+		</a>
+
+	</div> <!-- End Paradise Slider -->
+
+    </header>
+    <!-- Header Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="section-header">
+              <h2 class="section-title wow fadeInUp">About Us</h2>
+              <div class="section-heading-line"></div>
+            </div>
+      			<p>It might have happened so many times that you or someone yours need doctor's help immediately, but they are not available due to some reasons. The Disease predition system is an end user support and online consultation project. Here, we propose a web application that slow users to get instant guidance on their disease through an inteligent system. The application is fed with various details and the disease associated with those details. The application allows users to share their disease realated issues.It then processes user specific details to check for various illness that could be associated with it. Here we use some intelligent Machine Learning techniques to guess the most accurate illness that could be associated with patient's details. Based on result patient can contact doctor accordingly for further treatment.
+
+              </p><div class="section-button">
+      				<a class="shadow-none btn btn-common text-capitalize">read more</a>
+      			</div>
+    		  </div>
+
+    		  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+    			  <div class="video-section-area">
+              <div class="image-here">
+                  <img class="img-fluid image-shadow wow rollIn Center mb-30" data-wow-delay="1s" src="{% static 'home/img/video.jpg' %}" alt="">
+              </div>
+            </div>
+    		  </div>
+        </div>
+      </div>
+    </section>
+       <section id="team" class="team-area section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInUp">Team Members</h2>
+          <div class="section-heading-line"></div>
+        </div>
+        <div class="row" style="display:flex;align-items:center;justify-content:center;">
+          <div class="col-md-3 col-sm-6">
+              <div class="our-team">
+                  <div class="pic">
+                      <img src="{% static 'home/img/team/krushnat.jpg' %}" alt="team-img">
+                  </div>
+                  <h3 class="title">KRUSHNAT M</h3>
+                  <span class="post">FOUNDER OF MEDICATOR</span>
+                  <ul class="social">
+                      <li><a href="#" class="fa fa-facebook"></a></li>
+                      <li><a href="#" class="fa fa-twitter"></a></li>
+                      <li><a href="#" class="fa fa-github"></a></li>
+                      <li><a href="#" class="fa fa-linkedin"></a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6" >
+              <div class="our-team">
+                  <div class="pic">
+                      <img src="{% static 'home/img/Sunil.jpg' %}" alt="team-img">
+                  </div>
+                  <h3 class="title">SUNIL PATIL</h3>
+                  <span class="post">FOUNDER OF MEDICATOR</span>
+                  <ul class="social">
+                      <li><a href="#" class="fa fa-facebook"></a></li>
+                      <li><a href="#" class="fa fa-twitter"></a></li>
+                      <li><a href="#" class="fa fa-github"></a></li>
+                      <li><a href="https://www.linkedin.com/in/sunil-patil-781788168" class="fa fa-linkedin"></a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+              <div class="our-team">
+                  <div class="pic">
+                      <img src="{% static 'home/img/team/vaibhav.jpg' %}" alt="team-img">
+                  </div>
+                  <h3 class="title">VAIBHAV PATIL</h3>
+                  <span class="post">FOUNDER OF MEDICATOR</span>
+                  <ul class="social">
+                      <li><a href="#" class="fa fa-facebook"></a></li>
+                      <li><a href="#" class="fa fa-twitter"></a></li>
+                      <li><a href="#" class="fa fa-google-plus"></a></li>
+                      <li><a href="#" class="fa fa-linkedin"></a></li>
+                  </ul>
+              </div>
+          </div>
+
+           <div class="col-md-3 col-sm-6">
+              <div class="our-team">
+                  <div class="pic">
+                      <img src="{% static 'home/img/team/parth.jpg' %}" alt="team-img">
+                  </div>
+                  <h3 class="title">PARTH WAGH</h3>
+                  <span class="post">FOUNDER OF MEDICATOR</span>
+                  <ul class="social">
+                      <li><a href="#" class="fa fa-facebook"></a></li>
+                      <li><a href="#" class="fa fa-twitter"></a></li>
+                      <li><a href="#" class="fa fa-github"></a></li>
+                      <li><a href="#" class="fa fa-linkedin"></a></li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="counter" class="section counters">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row" style="float:center">
+            <!-- <div class="m col-12 col-sm-6 col-md-3 col-lg-3 text-center">
+              <div class="wow fadeInUp" data-wow-delay=".2s">
+                <div class="facts-item">
+                  <div class="fact-count">
+					          <i class="icon-globe fa-3x mb-3"></i>
+                    <h3><span class="counter">4452</span></h3>
+                    <h4>Project Done</h4>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="m col-12 col-sm-6 col-md-3 col-lg-3 text-center">
+              <div class="wow fadeInUp" data-wow-delay=".4s">
+                <div class="facts-item">
+                  <div class="fact-count">
+					          <i class="icon-rocket fa-3x mb-3"></i>
+                    <h3><span class="counter">367</span></h3>
+                    <h4>Happy Clients</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m col-12 col-sm-6 col-md-3 col-lg-3 text-center">
+              <div class="wow fadeInUp" data-wow-delay=".6s">
+                <div class="facts-item">
+                  <div class="fact-count">
+					          <i class="icon-briefcase fa-3x mb-3"></i>
+                    <h3><span class="counter">965</span></h3>
+                    <h4>Working Hours</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m col-12 col-sm-6 col-md-3 col-lg-3 text-center">
+              <div class="wow fadeInUp" data-wow-delay=".8s">
+                <div class="facts-item">
+                  <div class="fact-count">
+					          <i class="icon-phone fa-3x mb-3"></i>
+                    <h3><span class="counter">280</span></h3>
+                    <h4>Followers</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="contact-us section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <!-- start contact form -->
+                    <div class="contact-form home-contact">
+                        <form action="{% url 'feedback' %}" method="POST">
+                          {% csrf_token %}
+                            <div class="single-input">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                            </div>
+
+                            <div class="single-input">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+
+                            <div class="single-input">
+                                <input type="tel" class="form-control" placeholder="Phone" name="phone">
+                            </div>
+
+                            <div class="single-input">
+                                <textarea name="Message" cols="30" rows="6" class="form-control" placeholder="Message" required></textarea>
+                            </div>
+
+                            <button class="welcom-btn" type="submit">send now</button>
+                        </form>
+                    </div><!-- end contact form -->
+                </div>
+
+                <div class="col-sm-12 col-md-8">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <!-- start google map -->
+                      <div class="map-and-address">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.4536926385535!2d74.26032541417749!3d16.654165127921363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb509926fa9%3A0x9af43eb75ec2804!2sKIT&#39;s%20College%20of%20Engineering%20(An%20Autonomous%20Institute)!5e0!3m2!1sen!2sin!4v1651480461101!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                  </div>
+
+                        <div class="row">
+                             <!-- single contact -->
+                            <div class="col-sm-4">
+                                <div class="single-contact">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+
+                                    <p><span>Phone-1:</span>7769001199</p>
+                                    <p><span>Phone-2:</span>9168781199</p>
+
+                                </div>
+                            </div>
+
+                            <!-- single contact -->
+
+
+                            <!-- single contact -->
+                            <div class="col-sm-4">
+                                <div class="single-contact">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+
+                                    <p>KIT's College of Engineering</p>
+                                    <p>Kolhapur</p>
+                                </div>
+                            </div>
+
+                             <div class="col-sm-4">
+                                <div class="single-contact">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+
+                                    <p><span>Email:</span>sunilpatil1481@gmail.com</p>
+                                    <p><span>Email:</span>vtpatil11111@gmail.com</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end google map -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Footer Area Start -->
+      <section class="footer-Content">
+        <div class="container wow fadeInDown">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 col-12">
+               <div class="widget">
+			         <h3 class="block-title"><img class="mr-2" src="{% static 'home/img/logo.png' %}" alt="logo">Medicator</h3>
+                <ul class="menu">
+                  <li><i class="icon fa fa-map-marker"></i>KIT's College Of <br> Engineering</li>
+                  <li><i class="icon fa fa-mobile"> </i>Kolhapur <br> </li>
+                  <li><i class="icon fa fa-envelope"></i>nitadpatil1976@gmail.com</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12 col-12">
+              <div class="widget">
+                <h3 class="block-title">Links</h3>
+                <ul class="menu">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Works</a></li>                
+                   
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2 col-sm-12 col-12">
+              <div class="widget">
+                <h3 class="block-title">Services</h3>
+                <ul class="menu">
+                  <li><a href="#">Disease Prediction</a></li>
+                  <li><a href="#">Online Doctor's consultation</a></li>
+                  <!-- <li><a href="#">Branding</a></li>
+                  <li><a href="#">UX Consulting</a></li>
+                  <li><a href="#">Mobile Apps</a></li> -->
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <!-- Footer area End -->
+      
+      <!-- Copyright Start  -->
+      <div id="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="site-info pull-left">
+                <p>© Copyright by <a rel="nofollow" href="">Design & Developed by Medicator &nbsp; &nbsp; </a></p>
+              </div>
+              <div class="bottom-social-icons social-icon pull-right">                 
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a> 
+                <a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a>
+                <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                <a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright End -->
+
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <div id="loader">
+      <div class="cssload-thecube">
+        <div class="cssload-cube cssload-c1"></div>
+        <div class="cssload-cube cssload-c2"></div>
+        <div class="cssload-cube cssload-c4"></div>
+        <div class="cssload-cube cssload-c3"></div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+	
+    <script src="{% static 'home/js/jquery-min.js' %}"></script>
+    <script src="{% static 'home/js/tether.min.js' %}"></script>
+    <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+    
+    <!-- Touch Swipe JS File Version - 1.6.18 -->
+    <script src="{% static 'home/js/jquery.touchSwipe.min.js' %}"></script>
+	  <!-- Paradise Slider Main JS File -->
+	  <script src="{% static 'home/js/paradise_slider_min.js' %}"></script>
+    <script src="{% static 'home/js/mixitup.min.js' %}"></script>
+	  <script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'home/js/jquery.slicknav.js' %}"></script>
+    <script src="{% static 'home/js/jquery.nav.js' %}"></script>
+    <script src="{% static 'home/js/smooth-scroll.js' %}"></script>
+    <script src="{% static 'home/js/wow.js' %}"></script>
+    <script src="{% static 'home/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'home/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'home/js/main.js' %}"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script>
+        localStorage.clear();
+    </script>
+  </body>
+</html>
